@@ -31,9 +31,9 @@ def get_db():
     try:
         connection = mysql.connector.connect(host='62.217.187.32',
                                              port='3306',
-                                             database=bd_name,
-                                             user=user,
-                                             password=password)
+                                             database="users",
+                                             user="ilfi",
+                                             password="password")
 
         if connection.is_connected():
             db_Info = connection.get_server_info()
@@ -172,4 +172,4 @@ def register():
 
 if __name__ == '__main__':
     create_table_if_not_exists()
-    app.run(debug=True, host="0.0.0.0", port = 8002)
+    app.run(debug=True, host="0.0.0.0", port = 8080)
