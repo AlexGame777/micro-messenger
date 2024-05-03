@@ -57,7 +57,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          docker build  -f ./services/Authenticate_users/Dockerfile ./services/Authenticate_users/ --tag cr.yandex/${{ secrets.YC_REGISTRY_ID }}/timofeev-service:latest
+          docker build  -f ./services/Authenticate_user/Dockerfile ./services/Authenticate_user/ --tag cr.yandex/${{ secrets.YC_REGISTRY_ID }}/timofeev-service:latest
 
       - name: Login to YC Registry
         uses: docker/login-action@v3.0.0
